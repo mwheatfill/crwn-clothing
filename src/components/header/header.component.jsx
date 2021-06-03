@@ -16,7 +16,7 @@ const Header = ({ currentUser }) => (
       <Link className="option" to="/shop">
         SHOP
       </Link>
-      <Link className="option" to="/contact">
+      <Link className="option" to="/shop">
         CONTACT
       </Link>
       {currentUser ? (
@@ -33,6 +33,6 @@ const Header = ({ currentUser }) => (
 );
 
 const mapStateToProps = (state) => ({
-  currentUser: state.user.CurrentUser
-})
+  currentUser: state.user.currentUser,
+});
 export default connect(mapStateToProps)(Header);
